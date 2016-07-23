@@ -42,13 +42,14 @@
     [itemArray addObject:item3];
     [itemArray addObject:item4];
     
-    NSMutableString *textStrimg;
+    NSMutableString *textString = [[NSMutableString alloc] initWithCapacity:4];
     
     for (NSString *itemString in itemArray) {
-        [textStrimg appendFormat:@"%@\n", itemString];
+        [textString appendFormat:@"%@\n", itemString];
+        NSLog(@"itemString: %@", itemString);
     }
     
-    self.textView.text = textStrimg;
+    self.textView.text = textString;
 }
 
 @end
